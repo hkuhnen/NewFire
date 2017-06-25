@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mar31Fire.StartPage"
+             Title="StartPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Label Text="Please enter your business Email" />
+            <Entry x:Name="emailEntry" Text="{Binding Path=emailAddress}" Placeholder="task name" />
+            <Button x:Name="enterButton" Text="Enter" Clicked="OnSaveActivated"/>
+            <Entry x:Name="confirmEntry" Text="{Binding Path=confirmCode}" IsVisible="True" Placeholder="Please enter confirm code from email"/>
+            <Button x:Name="confirmButton" Text="Confirm" Clicked="confirmButton_Clicked" IsVisible="True"/>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
